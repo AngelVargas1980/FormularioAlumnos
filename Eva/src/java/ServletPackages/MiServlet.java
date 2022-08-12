@@ -59,17 +59,20 @@ public class MiServlet extends HttpServlet {
             out.println("<title>Servlet MiServlet</title>");  
             out.println("<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css\" integrity=\"sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N\" crossorigin=\"anonymous\">");
             out.println("<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct\" crossorigin=\"anonymous\"></script>");
-            /*out.println("   ");*/
+            /*out.println(" style=\"background-color: #AED6F1 \"  ");*/
             out.println("</head>");            
-            out.println("<body style=\"background-color: #AED6F1 \">");
+            out.println("<body >");
+            out.println("<img src=\"logoMiumg3.png\">");  
+            out.println ("<img src=\"cabecera.jpg\">");
             out.println("<div class='container'>");
-            out.println("<br><h1>Hola Gracias por registrarse </h1><br>");  
+            out.println("<br><h1 align=\"center\" style=\"color:black\">GRACIAS POR REGISTRARSE!</h1><br>");   
             out.println("<form name='nombreForm'>");
             out.println("<div class='container-lg d-flex'> <a href='index.html' class=\"btn btn-success ml-auto\">Registrar Nuevo</a></div><br>"); /*Boton de regresar a pagina principal*/
             out.println("<table class=\"table table-hover table-striped\">");   
             out.println("<thead><tr> <th scope=\"col\">CODIGO CLIENTE</th> <th scope=\"col\">NOMBRE DEL CLIENTE</th>\n" +
                                 "<th scope=\"col\">CORREO DEL CLIENTE</th> <th scope=\"col\">DIRECCION</th>\n" +
-                                "<th scope=\"col\">ACCION</th> </tr></thead>");  
+                                "<th scope=\"col\">TELEFONO</th> <th scope=\"col\">ACCION</th> </tr></thead>");
+                                  
             out.println("<tbody>");
             for (int i = 0; i < alumnosRegistrados.length; i++){
                     if(!alumnosRegistrados[i].getCodigo().isEmpty()){
@@ -77,6 +80,7 @@ public class MiServlet extends HttpServlet {
                        out.println("<td>" + alumnosRegistrados[i].getNombre() + "</td>");
                        out.println("<td>" + alumnosRegistrados[i].getCorreo()+ "</td>");
                        out.println("<td>" + alumnosRegistrados[i].getDireccion()+ "</td>");
+                       out.println("<td>" + alumnosRegistrados[i].getTelefono()+ "</td>");
                        out.println("<td>"
                                + "<button type=\"button\" class=\"btn btn-warning\"></i>Editar</button> "
                                + "<button type=\"button\" class=\"btn btn-danger\">Eliminar</button>"
