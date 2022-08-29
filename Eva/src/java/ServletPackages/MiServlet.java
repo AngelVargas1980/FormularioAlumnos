@@ -83,7 +83,7 @@ public class MiServlet extends HttpServlet {
                        out.println("<td>" + alumnosRegistrados[i].getTelefono()+ "</td>");
                        out.println("<td>"
                                + "<button type=\"button\" class=\"btn btn-warning\"></i>Editar</button> "
-                               + "<button type=\"button\" class=\"btn btn-danger\">Eliminar</button>"
+                               + "<button type=\"button\" class=\"btn btn-danger\"  value=\"Borrar formulario\"   >Eliminar</button>"
                                + "</td></tr>");
                        
                     }
